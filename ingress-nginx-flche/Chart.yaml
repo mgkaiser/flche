@@ -1,0 +1,10 @@
+apiVersion: v2
+name: ingress-nginx-flche
+description: Helm Chart to install NGinX for FLCHE
+type: application
+version: 4.0.13
+appVersion: 4.0.13
+dependencies:
+  - name: ingress-nginx
+    version: 4.0.13
+    repository: https://kubernetes.github.io/ingress-nginx

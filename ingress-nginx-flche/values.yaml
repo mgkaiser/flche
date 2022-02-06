@@ -1,0 +1,8 @@
+ingress-nginx:
+  controller:
+    service:   
+      loadBalancerIP: 20.122.57.55 
+      annotations: {
+        "service.beta.kubernetes.io/azure-load-balancer-resource-group" : flche-rg,
+        "service.beta.kubernetes.io/azure-dns-label-name" : flche2
+      }
