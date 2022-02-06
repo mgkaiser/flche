@@ -5,6 +5,6 @@ type: application
 version: v1.7.0
 appVersion: v1.7.0
 dependencies:
-  - name: ingress-nginx
+  - name: cert-manager
     version: v1.7.0
     repository: https://charts.jetstack.io
