@@ -1,3 +1,4 @@
+# namespace: wordpress-flche
 wordpress:
   service:  
     type: ClusterIP
