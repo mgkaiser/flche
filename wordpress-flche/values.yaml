@@ -1,4 +1,28 @@
 # namespace: wordpress-flche
 wordpress:
+  replicaCount: 2
   service:  
     type: ClusterIP
+  persistence:
+    storageClass: azurefile
+    accessMode: [ ReadWriteMany ]
+    size: 40Gi
+  autoscaling:
+    enabled: true
+    minReplicas: 2
+    maxReplicas: 6
+    targetCPU: 50
+    targetMemory: 50    
+  mariadb:
+    architecture: replication
+    primary:
+      persistence:
+        storageClass: managed
+        accessModes: [ ReadWriteOnce ]
+        size: 32Gi
+    secondary:
+      persistence:
+        storageClass: managed
+        accessModes: [ ReadWriteOnce ]
+        size: 32Gi
+
