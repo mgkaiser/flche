@@ -1,0 +1,10 @@
+rancher:
+  hostname: rancher.flche.kaiser.guru
+  replicas: 3
+  ingress:
+    tls:
+      source: letsEncrypt
+  letsEncrypt:
+    email: mgkaiser@hotmail.com
+    ingress:
+      class: nginx

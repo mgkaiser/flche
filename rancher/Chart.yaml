@@ -1,0 +1,10 @@
+apiVersion: v2
+name: rancher
+description: Helm Chart to installRancher
+type: application
+version: 2.6.9
+appVersion: 2.6.9
+dependencies:
+  - name: rancher
+    version: 2.6.9
+    repository: https://releases.rancher.com/server-charts/stable

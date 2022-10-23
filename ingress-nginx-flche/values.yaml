@@ -1,17 +1,3 @@
-# namespace: ingress-nginx-flche
-# Take the IP they give your and update DNS
-#ingress-nginx:
-#  controller:
-#    service:   
-#      loadBalancerIP: 20.122.57.55 
-#      annotations: {
-#        "service.beta.kubernetes.io/azure-load-balancer-resource-group" : flche-rg,
-#        "service.beta.kubernetes.io/azure-dns-label-name" : flche2
-#      } 
-
-      
-# Make the app contributor
-#az role assignment create \
-#    --assignee 63bfbf0d-8fdc-4360-a862-a7e34a7a62f8 \
-#    --role "Network Contributor" \
-#    --scope /subscriptions/1ef46f10-e2ca-4911-9eef-ff3cd6873df1/resourceGroups/flche-rg
+ingress-nginx:
+  controller:
+    replicaCount: 3
