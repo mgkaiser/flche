@@ -7,4 +7,6 @@
 ## NGINX
 
 ## Wordpress
-https://github.com/bitnami/charts/tree/main/bitnami/wordpress
+
+<https://github.com/bitnami/charts/tree/main/bitnami/wordpress>
+
