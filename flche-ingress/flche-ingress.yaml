@@ -8,6 +8,7 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /$1
     nginx.ingress.kubernetes.io/use-regex: "true"        
   name: flche-ingress
+  namespace: wordpress-flche  
 spec:
   rules:
   - host: www.flche.kaiser.guru

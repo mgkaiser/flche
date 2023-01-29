@@ -1,6 +1,8 @@
 # Local .terraform directories
 aks/**/.terraform/*
 aks/.terraform.lock.hcl
+dns/**/.terraform/*
+dns/.terraform.lock.hcl
 
 # .tfstate files
 *.tfstate
@@ -9,6 +11,8 @@ aks/.terraform.lock.hcl
 # Crash and Debug log files
 aks/crash.log
 aks/debug.log
+dns/crash.log
+dns/debug.log
 
 # Ignore any .tfvars files that are generated automatically for each Terraform run. Most
 # .tfvars files are managed as part of configuration and so should be included in
@@ -22,6 +26,10 @@ aks/override.tf
 aks/override.tf.json
 aks/*_override.tf
 aks/*_override.tf.json
+dns/override.tf
+dns/override.tf.json
+dns/*_override.tf
+dns/*_override.tf.json
 
 # Include override files you do wish to add to version control using negated pattern
 #
