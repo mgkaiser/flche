@@ -6,12 +6,11 @@ a-records               = [
     {name = "@",            ip = "199.34.228.59"},      // Points to the Weebly site
     {name = "*",            ip = "20.81.29.167"},       // Points to the Azure site
     {name = "www",          ip = "199.34.228.59"},      // Points to the Weebly site
-    {name = "www-new",      ip = "20.81.29.167"},       // Points to the Azure site
 ]
 
 cname-records               = [
-    {name = "calendar",         record = "20.81.29.167"},       
-    {name = "drive",            record = "20.81.29.167"},       
+    {name = "calendar",         record = "ghs.googlehosted.com."},       
+    {name = "drive",            record = "ghs.googlehosted.com."},       
     {name = "email",            record = "email.secureserver.net"},    
     {name = "ftp",              record = "flche.net"},       
     {name = "groups",           record = "ghs.googlehosted.com."},       
