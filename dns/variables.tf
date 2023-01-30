@@ -30,6 +30,14 @@ variable "a-records" {
 		ip = string
 	}))
 }
+
+variable "cname-records" {
+	type = list(object({
+		name = string
+		record = string
+	}))
+}
+
 variable "mx-records" { 
 	type = list(object({
 		name = string
@@ -39,10 +47,11 @@ variable "mx-records" {
 		}))
 	}))
 }
+
 variable "txt-records" {
 	type = list(object({
 		name = string
-		value = string
+		values = list(string)
 	}))
 }
 

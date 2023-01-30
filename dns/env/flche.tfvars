@@ -6,31 +6,43 @@ a-records               = [
     {name = "@",            ip = "199.34.228.59"},      // Points to the Weebly site
     {name = "*",            ip = "20.81.29.167"},       // Points to the Azure site
     {name = "www",          ip = "199.34.228.59"},      // Points to the Weebly site
+    {name = "www-new",      ip = "20.81.29.167"},       // Points to the Azure site
 ]
 
-mx-records              = [
-    
-    /*
-    {
-        name    = "*"
-        records = [
-            { preference = 5,   exchange = "ALT2.ASPMX.L.GOOGLE.COM"},
-            { preference = 10,  exchange = "ALT3.ASPMX.L.GOOGLE.COM"},
-            { preference = 10,  exchange = "ALT4.ASPMX.L.GOOGLE.COM"},
-            { preference = 15,  exchange = "vmphfcsx4oh5xbhxyovzmwszg5wykd2eejua2iw4ucnvwui4ifuq.mx-verification.google.com."},
-            { preference = 1,   exchange = "ASPMX.L.GOOGLE.COM"}
-        ]
-    },
+cname-records               = [
+    {name = "calendar",         record = "20.81.29.167"},       
+    {name = "drive",            record = "20.81.29.167"},       
+    {name = "email",            record = "email.secureserver.net"},    
+    {name = "ftp",              record = "flche.net"},       
+    {name = "groups",           record = "ghs.googlehosted.com."},       
+    {name = "mail",             record = "ghs.googlehosted.com."},       
+    {name = "sites",            record = "ghs.googlehosted.com."},       
+    {name = "_domainconnect",   record = "_domainconnect.gd.domaincontrol.com."},    
+]
+
+mx-records              = [        
     {
         name    = "@"
         records = [
-            { preference = 5,   exchange = "ms14873141.msv1.invalid"}
+            { preference = 1,   exchange = "aspmx.l.google.com."},
+            { preference = 5,   exchange = "alt1.aspmx.l.google.com."},
+            { preference = 5,   exchange = "alt2.aspmx.l.google.com."},
+            { preference = 10,  exchange = "aspmx2.googlemail.com."},
+            { preference = 10,  exchange = "aspmx3.googlemail.com."},
         ]
-    }
-    */
+    }    
 ]
 
 txt-records               = [
-    // {name = "@",                value = "google-site-verification=qx5yilfjj9uE98OrllpZN22FD0QiaA0i3KCbW1EcQWk"},
-    // {name = "_acme-challenge",  value = "WM1PjfJ871RkXWc3tNyhJA2JHVkpH7bhDullFjacqk4"},    
+    {
+        name = "@",    
+        values = [
+            "ke8O8Yn5-yQOCVuKfKRbCkjTnt5KH9yQY292zbwEQg8",
+            "v=spf1 include:_spf.google.com ~all"
+        ]
+    }    
 ]
+
+// Old SOA
+//ns75.domaincontrol.com
+//ns76.domaincontrol.com
