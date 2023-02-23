@@ -40,7 +40,8 @@ txt-records               = [
         name = "@",    
         values = [
             "ke8O8Yn5-yQOCVuKfKRbCkjTnt5KH9yQY292zbwEQg8",
-            "v=spf1 include:_spf.google.com ~all"
+            "v=spf1 include:_spf.google.com ~all",
+            "google-site-verification=I2Ks04rf3GAwqVimVu4FQM7w-8YUpn-rlUIvPObA-mM"
         ]
     }    
 ]
