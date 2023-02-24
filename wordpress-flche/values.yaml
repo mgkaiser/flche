@@ -42,7 +42,7 @@ wordpress:
     #
     ServerRoot "/opt/bitnami/apache"
 
-    LimitRequestBody 16384
+    LimitRequestBody 16777216
 
     #
     # Mutex: Allows you to set the mutex mechanism and mutex file directory
