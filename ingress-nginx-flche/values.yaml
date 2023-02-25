@@ -2,4 +2,4 @@ ingress-nginx:
   controller:
     replicaCount: 3
     config:
-      proxy-body-size: 83886080
+      proxy-body-size: 80m
