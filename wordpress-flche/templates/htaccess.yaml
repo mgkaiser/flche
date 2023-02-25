@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:  
+  name: {{ .Values.wordpress.customHTAccessCM }}
+  namespace: {{ .Release.Namespace | quote }}
+data:
+  wordpress-htaccess.conf: |-
+    php_value upload_max_filesize 80M
+    php_value post_max_size 80M

@@ -9,6 +9,7 @@ wordpress:
     storageClass: managed-csi
     accessModes: [ ReadWriteOnce ]
     size: 64Gi
+  customHTAccessCM: htaccess-config
   apacheConfiguration: |    
     #
     # This is the main Apache HTTP server configuration file.  It contains the
@@ -42,7 +43,7 @@ wordpress:
     #
     ServerRoot "/opt/bitnami/apache"
 
-    LimitRequestBody 16777216
+    LimitRequestBody 83886080
 
     #
     # Mutex: Allows you to set the mutex mechanism and mutex file directory
