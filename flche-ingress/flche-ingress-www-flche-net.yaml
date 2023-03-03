@@ -3,10 +3,10 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   annotations:
-    cert-manager.io/cluster-issuer: letsencrypt 
-    kubernetes.io/ingress.class: nginx
-    nginx.ingress.kubernetes.io/rewrite-target: /$1
-    nginx.ingress.kubernetes.io/use-regex: "true"        
+    cert-manager.io/cluster-issuer: letsencrypt     
+    kubernetes.io/ingress.class: azure/application-gateway    
+    appgw.ingress.kubernetes.io/health-probe-path: "/wp-admin/install.php"   
+    appgw.ingress.kubernetes.io/use-private-ip: "false"            
   name: flche-ingress-www-flche-net
   namespace: wordpress-flche
 spec:
@@ -19,8 +19,8 @@ spec:
             name: wordpress-flche
             port:
               number: 80
-        path: /(.*)
-        pathType: Prefix
+        path: /
+        pathType: Exact
   tls:
   - hosts:
     - www.flche.net    

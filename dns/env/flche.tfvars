@@ -3,9 +3,9 @@ environment             = "prod"
 cluster-base-domain     = "flche.net"
 
 a-records               = [
-    {name = "@",            ip = "20.81.29.167"},       // Points to the Azure site
-    {name = "*",            ip = "20.81.29.167"},       // Points to the Azure site
-    {name = "www",          ip = "20.81.29.167"},       // Points to the Azure site
+    {name = "@",            ip = "20.237.81.167"},       // Points to the Azure site
+    {name = "*",            ip = "20.237.81.167"},       // Points to the Azure site
+    {name = "www",          ip = "20.237.81.167"},       // Points to the Azure site
 
     // Points to the Weebly site
     //{name = "old",          ip = "199.34.228.59"},      
