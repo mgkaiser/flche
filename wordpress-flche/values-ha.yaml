@@ -6,7 +6,7 @@ wordpress:
     type: ClusterIP
   persistence:
     enabled: true
-    storageClass: azurefile-csi-premium
+    storageClass: azurefile-csi-nfs
     accessModes: [ ReadWriteMany ]
     size: 64Gi
   customHTAccessCM: htaccess-config
@@ -537,8 +537,14 @@ wordpress:
     Include "/opt/bitnami/apache/conf/bitnami/bitnami.conf"
     Include "/opt/bitnami/apache/conf/bitnami/php.conf"
 
-  mariadb:    
+  mariadb:  
+    architecture: replication  
     primary:
+      persistence:
+        storageClass: managed-csi
+        accessModes: [ ReadWriteOnce ]
+        size: 32Gi
+    secondary:
       persistence:
         storageClass: managed-csi
         accessModes: [ ReadWriteOnce ]
