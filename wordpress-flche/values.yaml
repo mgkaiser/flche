@@ -1,5 +1,7 @@
 # namespace: wordpress-flche
 wordpress:
+  image:
+    tag: 6.3.0-debian-11-r7
   replicaCount: 1
   wordpressPassword: P@$$w0rd!
   service:  
@@ -537,7 +539,9 @@ wordpress:
     Include "/opt/bitnami/apache/conf/bitnami/bitnami.conf"
     Include "/opt/bitnami/apache/conf/bitnami/php.conf"
 
-  mariadb:    
+  mariadb:
+    image:
+      tag: 11.0.3-debian-11-r5    
     primary:
       persistence:
         storageClass: managed-csi
