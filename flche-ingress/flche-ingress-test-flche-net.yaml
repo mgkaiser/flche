@@ -7,7 +7,7 @@ metadata:
     kubernetes.io/ingress.class: azure/application-gateway    
     appgw.ingress.kubernetes.io/health-probe-path: "/wp-admin/install.php"   
     appgw.ingress.kubernetes.io/use-private-ip: "false"            
-  name: flche-ingress-test-flche-net
+  name: flche-ingress-test-flche
   namespace: wordpress-flche2
 spec:
   rules:

@@ -12,7 +12,7 @@ spec:
     solvers:
     - http01:
         ingress:
-          class: azure/application-gateway
+          class: nginx
           podTemplate:
             spec:
               nodeSelector:
