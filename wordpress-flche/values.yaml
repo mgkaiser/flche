@@ -1,7 +1,7 @@
 # namespace: wordpress-flche
 wordpress:
   image:
-    tag: 6.3.0-debian-11-r7
+    tag: 6.3.2-debian-11-r8
   replicaCount: 1
   wordpressPassword: P@$$w0rd!
   service:  
@@ -541,7 +541,7 @@ wordpress:
 
   mariadb:
     image:
-      tag: 11.0.3-debian-11-r5    
+      tag: 11.1.2-debian-11-r1    
     primary:
       persistence:
         storageClass: managed-csi
