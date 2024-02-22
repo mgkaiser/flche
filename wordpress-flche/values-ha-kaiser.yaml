@@ -1,6 +1,6 @@
 # namespace: wordpress-flche
 wordpress:
-  replicaCount: 2
+  replicaCount: 3
   wordpressPassword: P@$$w0rd!
   service:  
     type: ClusterIP
